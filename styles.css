@@ -1,0 +1,767 @@
+
+
+/* ----- IMPORTED FONTS ----- */
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Golos+Text:wght@400..900&family=Wendy+One&display=swap');
+
+/* ----- CSS RESET ----- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+  min-width:1280px;
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- ROOT VARIABLES ----- */
+:root {
+  --red:#f4372a;
+  --light-red:#ff4e54;
+  --required-red:#ff0008;
+  --orange:#fe9d0b;
+  --yellow:#f9c500;
+  --green:#00b14d;
+  --teal:#00746D;
+  --turquoise:#01d0bc;
+  --light-blue:#1be5fc;
+  --blue:#1f71ff;
+  --neon-blue:#5300ff;
+  --purple:#b81fd3;
+  --bronze:#e89c0b;
+  --gold:#ffd509;
+  --light-gray:#eaeaea;
+  --med-gray:#555;
+  --dark-gray:#222;
+  --black:#000000;
+  --black-to-white:#000000;
+  --section-background:#fffaf0;
+  --box-shadow: -5px 5px 5px var(--med-gray);
+	--hover-shadow: -3px 3px 6px var(--med-gray);
+  --background-image:url(https://images.unsplash.com/photo-1557683325-3ba8f0df79de?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+/* ----- DARK MODE ----- */
+[theme-mode="dark"] {
+  --red:#F54539;
+  --light-red:#ff4e54;
+  --required-red:#ff0008;
+  --orange:#F49301;
+  --yellow:#FAC505;
+  --green:#00AE4C;
+  --teal:#00B8AB;
+  --turquoise:#00D1BD;
+  --light-blue:#1fe8ff;
+  --blue:#74A6FB;
+  --neon-blue:#BB99FF;
+  --purple:#C93CE2;
+  --bronze:#fedd73;
+  --gold:#ffd509;
+  --light-gray:#eaeaea;
+  --med-gray:#555;
+	--dark-gray:#222;
+  --black-to-white:#FFFFFF;
+  --section-background:#1A3887;
+  --box-shadow: -5px 5px 5px var(--med-gray);
+	--hover-shadow: -3px 3px 6px var(--med-gray);
+  --background-image:url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+/* ----- GENERAL ----- */
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background-image: var(--background-image);
+  background-size:cover;
+}
+
+body {
+  min-width:1280px;
+  grid-template-columns:repeat(2,1fr);
+  margin-left:2em;
+  margin-right:2em;
+  line-height: 1.35;
+}
+
+/* -- The site is meant to be a single page, fixed 1280px wide site. You may make it responsive to earn extra credit, but only if your JS is working correctly first. Focus on the functionality. -- */
+/* ----- HEADER ----- */
+header {
+  border: solid var(--gold) 7px;
+  border-radius:12px;
+  background-color:var(--section-background);
+  font-weight:bold;
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:100%;
+	max-width: calc(1280px - 32px);
+	margin: 0 auto;
+  margin-top:-1em;
+}
+
+header p {
+  color:var(--bronze);
+  font-size:2.15em;
+  font-family:"Wendy One";
+  font-style:italic;
+  font-weight:normal;
+}
+
+header img {
+  width:35%;
+  margin-top:1.15em;
+  border:none;
+}
+
+#light-dark-mode-toggle {
+  width:17%;
+  margin-right:1.15em;
+  margin-bottom:-4.32em;
+}
+
+/* ----- HIDDEN ----- */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+/* Hidden content for screen reader users - code from: https://webaim.org/techniques/css/invisiblecontent/ */
+
+/* ----- NAVIGATION ----- */
+nav ul {
+  display:flex;
+  padding-left:1em;
+  padding-right:1em;
+  margin-left:1em;
+  margin-right:1em;
+  margin-top:0.5em;
+  margin-bottom:-0.75em;
+  justify-content:center;
+  list-style:none;
+}
+
+nav li {
+  margin-left:1em;
+  margin-right:1em;
+  margin-bottom:0.75em;
+}
+
+nav a {
+  color:var(--neon-blue);
+  font-size:1.65em;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+  text-align:center;
+  font-family:"DM Serif Display";
+}
+
+/* ----- HOVER STYLES ----- */
+@media (hover:hover) {
+  button:hover, input[type="submit"]:hover {
+    box-shadow:var(--hover-shadow);
+  }
+}
+
+/* ----- MAIN ----- */
+main {
+  grid-template-columns:1fr;
+	width: 100%;
+	max-width: calc(1280px - 32px);
+	margin: 0 auto;
+  padding-top:10px;
+}
+
+/* ----- SECTIONS ----- */
+main > section {
+  background-color:var(--section-background);
+  border: solid var(--gold) 7px;
+  border-radius:10px;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
+}
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4 {
+	text-align: center;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 4.5rem;
+	margin: 1rem;
+  font-family:"Charm";
+}
+
+h2 {
+  font-family:"Wendy One";
+  font-size:3em;
+  margin-top:0.2575em;
+  margin-bottom:-0.1575em;
+}
+
+#warm-welcome h2 {
+  color:var(--red);
+}
+
+#game1 h2 {
+  margin-top:-0.5em;
+  margin-bottom:0.25em;
+}
+
+#parks h2 {
+  color:var(--orange);
+}
+
+#resorts h2 {
+  color:var(--yellow);
+}
+
+#activities-and-dining h2 {
+  color:var(--green);
+}
+
+#shop h2 {
+  color:var(--turquoise);
+}
+
+#newsletter-subscription h2 {
+  color:var(--purple);
+}
+
+h3 {
+  font-family:"Wendy One";
+	font-size:2.5em;
+	margin-top:0.7em;
+  margin-bottom:-0.35em;
+}
+
+#game1 h3 {
+  font-family:"DM Serif Display";
+  font-size:2.25em;
+  font-weight:bold;
+  font-style:italic;
+	margin-top:-0.2em;
+  margin-bottom:0.5em;
+  color:var(--blue);
+}
+
+#product-display h3 {
+  color:var(--blue);
+  font-family:"DM Serif Display";
+  font-style:italic;
+  margin-top:0.5em;
+  margin-bottom:-0.05em;
+}
+
+#parks h3 {
+  color:var(--orange);
+}
+
+#resorts h3 {
+  color:var(--yellow);
+}
+
+#activities-and-dining h3 {
+  color:var(--green);
+}
+
+h4 {
+	font-size: 1.3rem;
+	margin: 0.35rem;
+}
+
+/* ----- PARAGRAPHS ----- */
+p {
+  font-size:1.75em;
+  font-family:"DM Serif Display";
+  font-weight:bold;
+  color:var(--blue);
+  text-align:center;
+	margin: 0 auto;
+	padding: 1rem 0;
+  max-width: 65ch;
+}
+
+h2 ~ p {
+  font-style:italic;
+  margin-bottom:-1em;
+}
+
+#warm-welcome h2 ~ p {
+  font-style:italic;
+  margin-bottom:0em;
+}
+
+#shop h2 ~ p {
+  font-style:italic;
+  margin-bottom:0em;
+}
+
+h3 ~ p {
+  font-family:"Golos Text";
+  font-size:1.27em;
+  line-height:1.3em;
+  color:var(--teal);
+}
+
+#newsletter-subscription p {
+  margin-bottom:-0.6em;
+}
+
+/* ----- STRONG TEXT ----- */
+strong {
+	display: block;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin: 1rem auto;
+	padding: 0.25rem;
+	width: fit-content;
+	background-color: var(--gold);
+}
+
+/* ----- IMAGES ----- */
+img {
+  width:80%;
+  border: solid var(--gold) 8px;
+  border-radius:10px;
+  display: block;
+	margin: 0 auto;
+  margin-bottom:1em;
+}
+
+/* ----- NEWSLETTER FORM ----- */
+.form-error {
+  color:var(--red);
+  font-family:"Golos Text";
+  font-size:1.1em;
+  font-weight:bold;
+  margin-left:0.6em;
+}
+
+#thank-you-message {
+  color:var(--green);
+  font-family:"Golos Text";
+  font-size:1.1em;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* ----- FORM CONTROLS ----- */
+input, label {
+	display: block;
+	font-size: 1rem;
+	font-family:sans-serif;
+}
+
+label {
+	margin: 0.5rem 0 0.25rem 0;
+}
+
+input {
+	padding: 0.5rem 0.25rem;
+	margin: 0 auto 1rem auto;
+	width: calc(100% - 1rem);
+}
+/* ----- BUTTONS/SUBMIT ----- */
+button, input[type="submit"] {
+	display: block;
+	color: var(--section-background);
+	padding: 1rem;
+	background-color: var(--blue);
+	border-radius:75px;
+  outline:none;
+  border: solid #e89c0b 4px;
+  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  margin: 0 auto;
+  margin-top:1em;
+  margin-bottom:1em;
+  box-shadow:none;
+  font-size:1.35em;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+  text-align:center;
+  font-family:"DM Serif Display"; 
+}
+
+input[type="submit"] {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.discover-more {
+	display: block;
+	padding: 1rem;
+	background-color: var(--neon-blue);
+	color: var(--section-background);
+	border-radius:75px;
+  border: solid var(--light-blue) 4px;
+  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  margin: 0 auto;
+  margin-top:1em;
+  margin-bottom:1em;
+  box-shadow:none;
+  font-size:1.35em;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+  text-align:center;
+  font-family:"DM Serif Display";
+ 
+}
+
+/* ----- FOR ERROR MESSAGES AND INPUT STYLES IN FORMS ----- */
+.message {
+  display:none;
+  color:var(--orange);
+  font-size:1.2em;
+  margin:0.25em 0;
+  font-weight:bold;
+}
+
+.error {
+  font-size:1em;
+  display:block;
+}
+
+.errorInput {
+  border:1px solid var(--orange);
+}
+
+/* ----- BACKGROUND COLORS/WIDTHS/PADDING ON INDIVIDUAL SECTIONS ----- */
+#product-display, #game1 {
+  background-color:var(--section-background);
+  padding:1rem;
+  width:calc(100% - 2rem);
+  max-width:1280px;
+}
+
+/* ----- GUESSING GAME ----- */
+#game1 {
+	margin-top: 2rem;	
+	padding-bottom: 2rem;
+}
+
+#game1 div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+#game1 h2 {
+	grid-column: 1/-1;
+}
+
+#game1 form {
+	padding: 1rem;
+}
+
+#gameOutput {
+  font-size:2.15em;
+  font-style:italic;
+}
+
+#gameDisplay p {
+	padding: 0.5rem;
+}
+
+#guesses {
+  display:flex;
+  justify-items:center;
+  font-size:2em;
+  font-family:"Wendy One";
+  padding-top:1em;
+  padding-left:0.75em;
+  padding-right:1.5em;
+}
+
+#user-guess-input {
+  margin-top:0.75em;
+  margin-bottom:1.1em;
+  font-size:1.25em;
+  font-family:"Golos Text"
+}
+
+#guessing-game-label {
+  font-family:"Wendy One";
+  color:#e89c0b;
+  font-size:1.65em;
+}
+
+/* ----- GUESSING GAME FORM ----- */
+form {
+  width:90%;
+  max-width:350px;
+  margin: 2.5em auto;
+  margin-top:0.25em;
+  border:5px solid var(--neon-blue);
+  border-radius:1em;
+  padding:0.75em;
+  background-color:#fffaf0;
+}
+
+/* ----- PRODUCT DISPLAY ----- */
+#product-display img {
+  width:50%;
+}
+
+#product-buttons {
+  display:flex;
+}
+
+dl {
+  text-align:center;
+  font-family:"Golos Text";
+  font-size:1.2em;
+}
+
+dt {
+
+  font-size:1.5em;
+  font-family:"Wendy One";
+  color:var(--turquoise);
+}
+
+dd {
+  color:var(--black-to-white);
+  font-family:"Golos Text";
+  line-height:1.35em;
+}
+
+/* ----- CLASSES FOR PRODUCT DISPLAY ----- */
+#switcher2 .currentItem {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	gap: 1rem;
+}
+
+.product-descriptions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  justify-content:center;
+  margin-left:12em;
+  margin-right:12em;
+  margin-bottom:0.25em;
+}
+
+.product {
+	display:none;
+}
+
+.hiddenItem {
+	display:none;
+}
+
+.currentItem {
+display:block;
+}
+
+/* ----- NEWSLETTER FORM ----- */
+#newsletter-subscription form {
+  background-color:#fffaf0;
+  width:40%;
+  max-width:none;
+  margin:2.5em auto;
+  margin-top:0.25em;
+  margin-bottom:1.9em;
+  border:5px solid var(--neon-blue);
+  border-radius:1em;
+  padding:0.75em;
+}
+
+input, textarea, select {
+  display:block;
+  outline:1px solid var(--black);
+  border:none;
+  border-radius:0.2em;
+}
+
+label {
+  font-size:1.35em;
+  font-weight:bold;
+  margin-top:0.25em;
+  margin-bottom:-0.075em;
+  margin-left:0.5em;
+  font-family:"Golos Text";
+}
+
+#comments-label {
+  font-size:1.1em;
+  margin-top:1em;
+  margin-left:0.4em;
+}
+
+.required {
+  color:var(--required-red);
+}
+
+input {
+  color:var(--black);
+  width:95%;
+  font-family:"Golos Text";
+  font-size:0.75em;
+}
+
+input:focus, select:focus, textarea:focus {
+  border:2px solid var(--blue);
+  box-shadow:0 0 0 1em var(--light-gray);
+}
+
+input:invalid, select:invalid, textarea:invalid {
+  background-color:var(--light-red);
+}
+
+fieldset {
+  display:grid;
+  grid-template-columns:1fr 6fr 1fr 6fr;
+  text-align:center;
+  width:95%;
+  height:5.5em;
+  margin-left:0.75em;
+  border:1px solid var(--black);
+  border-radius:0.2em;
+  font-size:0.9em;
+}
+
+legend {
+  font-family:"Golos Text";
+  font-size:1.35em;
+  font-weight:bold;
+  margin-left:-4em;
+  padding-left:0.3em;
+  padding-right:0.3em;
+}
+
+fieldset label {
+  width:2em;
+}
+
+textarea {
+  max-width:95%;
+  min-width:95%;
+  height:25%;
+  margin:0 auto;
+}
+
+::placeholder {
+  font-family:"Golos Text";
+  color:var(--black);
+  font-size:1.3em;
+  padding-left:0.25em;
+}
+
+#comments-label {
+  font-size:1.35em;
+}
+
+input[type="radio"] {
+  margin-top:0.75em;
+  margin-left:1.5em;
+  outline:none;
+}
+
+.radio-label {
+  margin-top:0.5em;
+  margin-left:1.5em;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  background-color:var(--section-background);
+  width:100%;
+  max-width:calc(1280px - 32px);
+  text-align:center;
+  margin:0 auto;
+  margin-top:2rem;
+  border:solid var(--gold) 7px;
+  border-bottom:none;
+  border-radius:12px;
+  padding:1rem 0;
+}
+
+footer ul {
+  display:flex;
+  justify-content:center;
+  margin-top:1em;
+  margin-bottom:1em;
+  list-style:none;
+}
+
+footer a {
+  color:var(--neon-blue);
+  font-family:"DM Serif Display";
+  font-size:1.6em;
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+}
+
+footer li {
+  margin:1em;
+}
+
+small {
+  color:var(--bronze);
+  font-family:"DM Serif Display";
+  font-size:1.25em;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>Disneyland | Where Dreams Come True</title>
+  <script src="file.js" async></script>
+</head>
+  
+<body>
+  <header>
+    <button id="light-dark-mode-toggle">Light/Dark Mode</button>
+    <h1 class="sr-only">Disneyland</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Disneyland_Park_Logo.svg" alt="The word 'Disneyland' is a royal blue in a sophisticated font.">
+    <p>The Happiest Place on Earth</p>
+    
+    <nav>
+      <ul>
+        <li><a href="#">Our Parks</a></li>
+        <li><a href="#">Our Resorts</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Dining</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">My Disneyland</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main id="main">
+  <section id="warm-welcome">
+    <h2>Discover the Magic of Disney</h2>
+    <p>Make memories that last a lifetime.</p>
+    <img src="https://images.unsplash.com/photo-1595274013294-6946aac9eb22?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The Cinderella castle, dressed in purple, rose and gold, standing in all its glory in front a cloudy sky.">
+      <button type="button" class="discover-more">Discover More</button>
+    
+      <section id="game1">
+        <div>
+          <h2>Play for a Chance to See Moana 2!</h2>
+            <form id="guessing-game-form" action="submit_form" method="post">
+              <label for="user-guess-input" id="guessing-game-label">Enter a Number (1 - 10):</label>
+              <span class="message">Please enter a number from 1 to 10</span>
+              <input type="number" name="numGuess" id="user-guess-input" min="1" max="10">
+              <input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
+              <div id="guesses">
+                <span id="computer-guess"></span>
+                <span id="user-guess"></span>
+              </div>
+              <p id="gameOutput"></p>
+            </form>
+            <section id="gameDisplay">
+              <h3>Guess a Number!</h3>
+              <p>This November, Moana sets sail across Oceania to fulfill the call of her wayfinding ancestors.</p>
+              <p>Guess the correct number and score a free movie ticket to see 'Moana 2,'<br>in theaters now!</p>
+              <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win!</p>
+            </section>
+          </div>
+        </section>
+  </section>
+    
+  <section id="parks">
+    <h2>Adventure is Out There</h2>
+    <p>Experience our fantastical theme parks for a world of fun.</p>
+    
+      <section id="disneyland-park">
+        <h3>Disneyland Park</h3>
+        <p>Journey back in time to where it all began. Since opening its gates in 1955, Disneyland Park has invited dreamers to let their imaginations soar. From the iconic It’s a Small World to the spectacular Space Mountain, there’s surely an adventure for all to enjoy.</p>
+      <button type="button" class="discover-more">Discover More</button>
+        <img src="https://images.unsplash.com/photo-1632579773276-1bf4f2befde6?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="DJ Rex, a gold, futuristic robot, creates some tunes with a grungy sound system inside a cave of Oga's Cantina in Hollywood Studios.">
+      </section>
+
+      <section id="disney-california-adventure-park">
+        <h3>Disney California Adventure Park</h3>
+        <p>Break out of buildings, corral critters and speed through the skies, all at Disney California Adventure Park. With Radiator Springs Racers, Jumpin’ Jellyfish and the Incredicoaster, endless possibilities are just waiting to be explored.</p>
+      <button type="button" class="discover-more">Discover More</button>
+        <img src="https://images.unsplash.com/photo-1678509651605-f2c0fa01c49a?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A futuristic roller coaster soaring sideways through a neon blue dome with an open structure of TRON Lightcycle Run in Tomorrowland.">
+      </section>
+  </section>
+    
+  <section id="resorts">
+    <h2>Find Your Happy Place</h2>
+    <p>Consider us your home away from home.</p>
+    
+      <section id="grand-californian">
+        <h3>Grand Californian Hotel and Spa</h3>
+        <p>Live life luxuriously at Disney’s Grand Californian Hotel and Spa. Treat yourself to elegant accommodations, exclusive amenities and fine dining. After a full day of thrills, there's no better way to rest, relax and unwind.</p>
+      <button type="button" class="discover-more">Discover More</button>
+        <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="An internal view of a quaint hotel with a laidback coastal feel, accented with white walls, turquoise curtains, wooden furniture and verdant palm trees.">
+      </section>
+    
+      <section id="pixar-place">
+        <h3>Pixar Place Hotel</h3>
+        <p>Watch your imagination reach new heights with the wonders of Pixar Place Hotel. Finally feel what it’s like to live in the world of your favorite Pixar movies. Get to know the characters from the silver screen like you’ve never seen before.</p>
+      <button type="button" class="discover-more">Discover More</button>
+        <img src="https://images.unsplash.com/photo-1474690455603-a369ec1293f9?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A secluded hotel coated in white and rose nestled by lush palm trees upon a hazy sky.">
+      </section>
+  </section>
+    
+  <section id="activities-and-dining">
+    <h2>To Infinity and Beyond</h2>
+    <p>Awe-inspiring thrills and treats await.</p>
+      
+    <section id="activities">
+      <h3>Activities</h3>
+      <p>The adventures don’t stop at the attractions! Discover every last drop of magic with character experiences, live entertainment and stage shows. Then, wrap up the festivities with a fireworks spectacle sure to delight. </p>
+      <button type="button" class="discover-more">Discover More</button>
+      <img src="https://images.unsplash.com/photo-1628371966298-ca2ef6040075?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Main Street Cinema, an old-timey movie palace displaying 'Now Showing 'Sweets & Treats, glowing with ruby and amber neon lights and adorned with bunting flags.">
+
+    </section>
+    
+    <section id="dining">
+      <h3>Dining</h3>
+      <p>Dig in to delicious delicacies for every appetite. Taste all there is to eat: Flo’s Famous Fried Chicken, Bao Buns and much more. With so many treats to try, it’s no surprise if you find yourself hungry for another bite.</p>
+      <button type="button" class="discover-more">Discover More</button>
+      <img src="https://images.unsplash.com/photo-1645570072967-82ceaea33b81?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flo's V8 Cafe, illuminated with turquoise and electric pink neon lights against a charcoal sky parked between two gas-station-themed dining areas.">
+    </section>
+  </section>
+  
+  <section id="shop">
+    <h2>Explore a World of Wonders</h2>
+    <p>Bring home a bit of the magic.</p>
+    <img src="https://images.unsplash.com/photo-1581909199603-0de32b43ffd2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A cluster of whimsical, Disney-themed balloons: some iridescent, some with princess designs and some within other balloons.">
+      <button type="button" class="discover-more">Discover More</button>
+    
+	<section id="product-display">
+		<h2>Find A Bow That's All Your Own</h2>
+
+		<section id="product-1" class="product currentItem">
+			<h3>Minnie Mouse Ear Headband with Polka Dot Bow</h3>
+			<img src="https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/4503106710261?fmt=webp&qlt=70&wid=932&hei=932" alt="A black, sequined Minnie Mouse ear headband with a red and white polka dot, sequined bow in between.">
+			<p>Rock Minnie’s signature look with this timeless headband. It features her iconic red and white polka dot bow resting between two cushiony black ears.</p>
+      <div class="product-descriptions">
+        <dl>
+          <dt>Details:</dt>
+          <dd>Padded, Sequined Ears</dd>
+          <dd>Sequined Bow</dd>
+          <dd>Sequined Headband</dd>
+          <dd>Velour Interior</dd>
+        </dl>
+        
+        <dl>
+          <dt>Additional Notes:</dt>
+          <dd>Polyester</dd>
+          <dd>One Size Fits Most Adults</dd>
+          <dd>Imported</dd>
+          <dd>Item No. 420213656977</dd>
+        </dl>
+      </div>
+		</section>
+
+		<section id="product-2" class="product hiddenItem">
+			<h3>Minnie Mouse Gold Sequin Ear Headband</h3>
+			<img src="https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/4503055210187?fmt=webp&qlt=70&wid=932&hei=932" alt="A soft gold, sequined Minnie Mouse ear headband with a golden, leather bow in between.">
+			<p>Glow like glitter with this show-stopping headband. With golden ears and bow, you’ll be sure to turn some heads.</p>
+      <div class="product-descriptions">
+        <dl>
+          <dt>Details:</dt>
+          <dd>Padded, Sequined Ears</dd>
+          <dd>Faux, Gold Leather Bow</dd>
+          <dd>Faux, Gold Leather Headband</dd>
+          <dd>Velour Interior</dd>
+        </dl>
+
+        <dl>
+          <dt>Additional Notes:</dt>
+          <dd>Polyester Backing/Band</dd>
+          <dd>One Size Fits Most Adults</dd>
+          <dd>Imported</dd>
+          <dd>Item No. 445032642529</dd>
+        </dl>
+      </div>
+		</section>
+
+		<section id="product-3" class="product hiddenItem">
+			<h3>Moana Ear Headband with Tropical Flowers</h3>
+			<img src="https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/4503055215629?fmt=webp&qlt=70&wid=932&hei=932" alt="A Moana-themed ear headband with ears patterned with tapa cloth detailing geometric island designs with yellow, pink and purple flowers in between.">
+			<p>Show your love for island life with this tropical headband. Explore the unknown like Moana with tapa-patterned ears and a vibrant assortment of flowers.</p>
+      <div class="product-descriptions">
+        <dl>
+          <dt>Details:</dt>
+          <dd>Padded Ears</dd>
+          <dd>Screen-Art-Patterned Ears</dd>
+          <dd>Faux Flowers on Headband</dd>
+          <dd>Inspired by Disney’s Moana</dd>
+        </dl>
+        
+        <dl>
+          <dt>Additional Notes:</dt>
+          <dd>Polyester Shell/Filling</dd>
+          <dd>Plastic Flowers</dd>
+          <dd>Imported</dd>
+          <dd>Item No. 420214087527</dd>
+        </dl>
+      </div>
+		</section>
+
+		<section id="product-4" class="product hiddenItem">
+			<h3>Spider-Man Ear Headband with Spiderwebbed Ears</h3>
+			<img src="https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/4503055216000?fmt=webp&qlt=70&wid=932&hei=932" alt="A Spider-Man-themed ear headband with blue and red ears half-covered in spiderwebs with a red spiderweb bow in between held by a mini illustration of Spider-Man in the center.">
+			<p>Take on the world with this heroic headband. Its blue and red spiderwebbed ears and red spiderwebbed bow are sure to impress those with even the most heightened spidey senses.</p>
+      <div class="product-descriptions">
+        <dl>
+          <dt>Details:</dt>
+          <dd>Padded Ears</dd>
+          <dd>Faux Leather Ears with Spiderweb Pattern</dd>
+          <dd>Round, Enamel Spider-Man Charm</dd>
+          <dd>Inspired by Marvel’s Spider-Man</dd>
+        </dl>
+        
+        <dl>
+          <dt>Additional Notes:</dt>
+          <dd>Polyester Backing/Band</dd>
+          <dd>Polyurethane Ears</dd>
+          <dd>Imported</dd>
+          <dd>Item No. 402215157397</dd>
+        </dl>
+      </div>
+		</section>
+
+		<section id="product-5" class="product hiddenItem">
+			<h3>Christmas Ear Headband with Glow-in-the-Dark Bulb</h3>
+			<img src="https://cdn-ssl.s7.shopdisney.com/is/image/DisneyShopping/4503105710253?fmt=webp&qlt=70&wid=932&hei=932" alt="A Christmas-themed glow-in-the-dark ear headband with vintage illustrations of wreaths surrounding Mickey and Minnie as ears and a ruby bow in between.">
+        <p>Spread some Christmas cheer with this joyous headband. Light up any room you’re in with Mickey, Minnie and glow-in-the-dark the bulbs.</p>
+      <div class="product-descriptions">
+        <dl>
+          <dt>Details:</dt>
+          <dd>Padded Faux Leather Ears</dd>
+          <dd>Glow-in-the-Dark Screen Art Bulbs for Ears</dd>
+          <dd>Padded Red Bow</dd>
+          <dd>Velour Interior</dd>
+        </dl>
+        
+        <dl>
+          <dt>Additional Notes:</dt>
+          <dd>Polyester/Elastane Headband</dd>
+          <dd>PVC Headband and Ears</dd>
+          <dd>Imported</dd>
+          <dd>Item No. 402215157397</dd>
+        </dl>
+      </div>
+		</section>
+	</section>
+
+		<section id="product-buttons">
+			<h2 class="sr-only">Click on a Button to View a Product</h2>
+			<button class="product-button" data-product="product-1">View Item 1</button>
+			<button class="product-button" data-product="product-2">View Item 2</button>
+			<button class="product-button" data-product="product-3">View Item 3</button>
+			<button class="product-button" data-product="product-4">View Item 4</button>
+			<button class="product-button" data-product="product-5">View Item 5</button>
+		</section>
+	</section>
+    
+  <section id="newsletter-subscription">
+    <h2>Stay in the Know</h2>
+    <p>Get the inside scoop on our latest deals and offers.</p>
+
+    <form id="newsletter-form" action="submit_form" method="post">
+          <label for="first-name">First Name <span class="required">*</span></label>
+          <span id="first-name-error"></span>
+          <input type="text" id="first-name" name="first-name" placeholder="Enter first name" autocomplete="given-name" required>
+
+          <label for="last-name">Last Name <span class="required">*</span></label>
+          <span id="last-name-error"></span>
+          <input type="text" id="last-name" name="last-name" placeholder="Enter last name" autocomplete="family-name" required>
+      
+          <label for="phone">Phone Number <span class="required">*</span></label>
+          <span id="phone-error"></span>
+          <input type="tel" id="phone" name="phone" placeholder="Enter phone number" autocomplete="tel" required>
+
+          <label for="email">Email Address <span class="required">*</span></label>
+          <span id="email-error"></span>
+          <input type="email" id="email" name="email" placeholder="Enter email address" autocomplete="email" required>
+          
+          <span id="preferred-contact-method-error"></span>
+          <fieldset>
+            <legend>Preferred Contact Method</legend>
+
+            <input type="radio" id="radio-email" name="radio" value="Email Address" checked>
+            <label for="radio-email" id="radio-email-label" class="radio-label">Email</label>
+
+            <input type="radio" id="radio-phone" name="radio" value="Phone">
+            <label for="radio-phone" id="radio-phone-label" class="radio-label">Phone</label>
+          </fieldset>
+
+          <label id="comments-label" for="comments">Comments?</label>
+          <textarea id="comments" rows="5" cols="33" placeholder="Enter comments here"></textarea>
+      
+          <button type="submit" id="newsletter-form-submit">Submit</button>
+      
+          <div id="thank-you-message"></div>
+        </form>
+        
+    <button type="button" class="discover-more">Discover More</button>
+  </section>
+</main>
+  
+<footer>
+  <ul>
+    <li><a href="#">Help and Guest Services</a></li>
+    <li><a href="#">Site Map</a></li>
+    <li><a href="#">Terms of Use</a></li>
+    <li><a href="#">Legal Notices</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+  </ul>
+  
+  <small>&copy; David Kila, All Rights Reserved</small>
+</footer>
